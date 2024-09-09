@@ -1,0 +1,184 @@
+/* Base styles */
+body {
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  background-color: #f8f9fa;
+  height: 100vh; 
+  overflow-x: hidden; 
+}
+
+.app {
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  min-height: 100vh; 
+}
+
+/* Background Container */
+.background-container {
+  position: fixed; 
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  background-size: cover; 
+  background-position: center; 
+  background-repeat: no-repeat;
+  filter: blur(8px); 
+  transition: background-image 0.5s ease-in-out;
+  height: 100%; 
+  width: 100%; 
+}
+
+.content {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+h1 {
+  font-size: 3rem;
+  color: #333;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+/* Search Form */
+.search-form {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.search-form input {
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 6px;
+  border: 1px solid #ddd;
+  width: 250px;
+  margin-right: 10px;
+}
+
+.search-form button {
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 6px;
+  border: none;
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+}
+
+.search-form button:hover {
+  background-color: #0056b3;
+}
+
+/* Pokémon card grid */
+.pokemon-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.pokemon-card {
+  background-color: rgba(255, 255, 255, 0.8); 
+  padding: 20px;
+  border-radius: 12px;
+  width: 150px;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+.pokemon-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.pokemon-card img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+
+.pokemon-card h2 {
+  font-size: 18px;
+  color: #333;
+  text-transform: capitalize;
+  margin: 0;
+}
+
+/* Floating card styles */
+.floating-card {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(255, 255, 255, 0.85);
+  border-radius: 12px;
+  padding: 30px;
+  max-width: 400px;
+  width: 90%;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2); 
+  z-index: 100;
+}
+
+.floating-card img {
+  max-width: 200px;
+  margin-bottom: 20px;
+}
+
+.floating-card h2 {
+  font-size: 24px;
+  margin-bottom: 15px;
+}
+
+.floating-card p {
+  margin: 5px 0;
+  font-size: 16px;
+}
+
+.floating-card .close {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  cursor: pointer;
+  font-size: 24px;
+}
+
+.floating-card .close:hover {
+  color: red;
+}
+
+
+/* Pagination */
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.pagination button {
+  padding: 10px 20px;
+  margin: 0 10px;
+  font-size: 16px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.pagination button:disabled {
+  background-color: #ccc;
+}
+
+.pagination span {
+  font-size: 16px;
+  color: #333;
+}
